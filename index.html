@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sindhura Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* internal styling (css) */
+        .typing-text {
+            width: 20.5ch;
+            animation: typing 3s steps(20) forwards;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid white;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 20ch
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent
+            }
+        }
+
+        .float-once {
+            animation: float-once 2s ease-in-out;
+        }
+
+        @keyframes float-once {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #333446;
+            color: white;
+
+            .roboto-<uniquifier> {
+                font-family: "Roboto", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+                font-variation-settings:
+                    "wdth" 100;
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 60px;
+            background-color: #7F8CAA;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 20px;
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: #333446;
+        }
+
+        .left {
+            font-size: 2rem;
+        }
+
+        .first {
+            display: flex;
+            justify-content: space-around;
+            margin: 100px 0;
+            align-items: center;
+            height: 70vh;
+        }
+
+        .first div {
+            width: 60%;
+        }
+
+        .leftsection {
+
+
+            font-size: 2rem;
+            line-height: 1.6;
+            text-align: left;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            display: flex;
+
+        }
+
+        .btn {
+
+            padding: 6px;
+            background: #7f8caa;
+            color: white;
+            border: 2px solid white;
+            border-radius: 20px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 8px #B8CFCE;
+            transition: 0.3s ease;
+        }
+
+        .skills .btn {
+            padding: 3px;
+            background: #333446;
+            color: white;
+            border: 2px solid #505163;
+            border-radius: 10px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .skills .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 10px #B8CFCE;
+        }
+
+        .rightsection img {
+            width: 80%;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .brown {
+            color: #FF9B45;
+        }
+
+        .second {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .about {
+            margin: 20px 0;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .about p {
+            margin: 20px 0;
+            line-height: 1.6;
+            text-align: justify;
+            font-size: 1.1rem;
+            margin-left: 50px;
+        }
+
+        .education {
+            margin: 20px 0;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .education ul {
+            margin: 20px 0;
+            line-height: 1.6;
+            text-align: justify;
+            font-size: 1.1rem;
+            margin-left: 50px;
+        }
+
+        .skills {
+            margin: 20px 0;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .skills ul {
+            margin: 20px 0;
+            line-height: 1.6;
+            text-align: justify;
+            font-size: 1.1rem;
+            margin-left: 50px;
+        }
+
+        .projects {
+            margin: 20px 0;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .projects ol {
+            margin: 20px 0;
+            line-height: 1.6;
+            text-align: justify;
+            font-size: 1.1rem;
+            margin-left: 50px;
+        }
+
+        .project-item {
+            background-color: #333446;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .project-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px #7AE2CF;
+        }
+
+        .project-details {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.6s ease, opacity 0.6s ease;
+            padding-top: 10px;
+        }
+
+        .project-item:hover .project-details {
+            max-height: 1000px;
+            opacity: 1;
+        }
+
+        .certifications {
+            margin: 20px 0;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .certifications ol {
+            margin: 20px 0;
+            line-height: 1.6;
+            text-align: justify;
+            font-size: 1.1rem;
+            margin-left: 50px;
+        }
+
+        .contact {
+            margin: 20px 0;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .contact-left {
+            margin: 20px 0;
+            line-height: 1.6;
+            text-align: justify;
+            font-size: 1.1rem;
+            margin-left: 50px;
+            flex-basis: 35%
+        }
+
+        .contact-left a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-left a:hover {
+            color: #F2C078;
+        }
+
+        .contact-left a i {
+            margin-right: 8px;
+        }
+
+        .contact-right {
+            flex-basis: 60%
+        }
+
+        .contact-right form {
+            width: 100%
+        }
+        #msg{
+            color: #b8cfce;
+            margin-top: --10px;
+            display: black;
+            margin :200px;
+        }
+
+        form input,
+        form textarea {
+            width: 60%;
+            border: 0;
+            outline: none;
+            background: #B8CFCE;
+            padding: 15px;
+            margin: 15px 0;
+            color: black;
+            font-size: 18px;
+            border-radius: 6px;
+            margin-left: 200px;
+        }
+
+        footer {
+            background-color: #7F8CAA;
+            height: 233px;
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+            line-height: 1.6;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        .footer ul li {
+            list-style: none;
+        }
+
+        .footer ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .footer ul li a:hover {
+            color: #333446;
+        }
+
+        /* Mobile responsive styles */
+        @media only screen and (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+            
+            .left {
+                margin-bottom: 10px;
+                font-size: 1.5rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 8px 0;
+            }
+            
+            .first {
+                flex-direction: column-reverse;
+                margin: 30px 0;
+                height: auto;
+            }
+            
+            .first div {
+                width: 90%;
+                margin: 15px auto;
+            }
+            
+            .leftsection {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+            
+            .rightsection img {
+                width: 70%;
+                margin: 0 auto;
+                display: block;
+            }
+            
+            .second {
+                max-width: 95vw;
+            }
+            
+            .about p, .education ul, .skills ul, .projects ol, .certifications ol {
+                margin-left: 20px !important;
+            }
+            
+            h1 {
+                text-align: center;
+            }
+            
+            .footer {
+                flex-direction: column;
+                padding: 20px;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .footer > div {
+                margin-bottom: 15px;
+            }
+            
+            form input, form textarea {
+                width: 90%;
+                margin-left: 5%;
+            }
+            
+            .contact-left {
+                margin-left: 20px;
+            }
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/503d435dd6.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+
+    <header>
+        <nav>
+            <div class="left">Sindhura's Portfolio</div>
+            <div class="right" id="right">
+                <ul>
+                    <li><a href="#right"> Home</a></li>
+                    <li><a href="#about"> About</a></li>
+                    <li><a href="#education"> Education</a></li>
+                    <li><a href="#skills"> Skills</a></li>
+                    <li><a href="#projects"> Projects</a></li>
+                    <li><a href="#certifications"> Certifications</a></li>
+                    <li><a href="#contact"> Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="first">
+            <div class="leftsection">
+                <div>
+                    <p id="typingText" class="typing-text">
+                        Hi, My name is <span class="brown">Sindhura</span>
+                    </p>
+                    <p>I am a Web Enthusiast<br>| Code. Create. Collaborate.</p>
+                    <div class="buttons" style="margin-top: 20px;">
+                        <a href="sindhura_Resume.pdf" download><button class="btn">Download Resume</button></a>
+                        <a href="https://github.com/sindhura-04" target="_blank">
+                               <button class="btn">Visit GitHub</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="rightsection">
+                <img src="female-developer.png" id="heroimage">
+            </div>
+        </section>
+
+        <hr style="border: 0;
+                   background: #7F8CAA;
+                   height: 2px;
+                   margin: 40px 84px;">
+
+        <section class="second">
+            <div class="about" id="about" data-aos="fade-up">
+                <h1 style="color: #7AE2CF;">ABOUT</h1>
+                <p>
+                    I'm Sindhura Lingampally, a passionate and enthusiastic aspiring software developer
+                    with a keen interest in web technologies and coding. With a background in electronics and
+                    communication engineering, I've developed a strong foundation in problem-solving and logical
+                    thinking. I'm currently exploring the software domain and upskilling myself in Python, SQL,
+                    front-end development and Data analysis. I enjoy building meaningful projects that combine
+                    creativity and technology. I believe in continuous learning, collaboration, and using code
+                    to make a positive impact. I'm excited to begin my journey in the tech industry and contribute
+                    to innovative and user-centric solutions.
+                </p>
+            </div>
+            <div class="education" id="education" data-aos="fade-left">
+                <h1 style="color: #7AE2CF;">EDUCATION</h1>
+                <ul>
+                    <li><strong>Bachelor of Technology in Electronics Communication and Instrumentation
+                            Engineering</strong>
+                        <br><em>Kakatiya Institute of Technology and Science, Warangal</em>
+                        <br>2021 – 2025
+                        <br>CGPA: 8.48 (80.56%)
+                    </li>
+                    <br>
+
+                    <li><strong>Intermediate (MPC)</strong>
+                        <br><em>SR Junior College, Waddepally</em>
+                        <br>2019 – 2021
+                        <br>Marks: 883 / 1000 (88.2%)
+                    </li>
+                    <br>
+
+                    <li><strong>Secondary School Certificate (SSC)</strong>
+                        <br><em>Bharathi Vidya Bhavan High School, Hanamkonda</em>
+                        <br>2008 – 2019
+                        <br>CGPA: 8.83 (88.3%)
+                    </li>
+                </ul>
+            </div>
+            <div class="skills" id="skills" data-aos="fade-right">
+                <h1 style="color: #7AE2CF;">SKILLS</h1>
+                <ul>
+                    <li><strong>Programming Languages:</strong>
+                        <button class="btn"><i class="fa-brands fa-python"></i> Python</button>,
+                        <button class="btn"><i class="fa-solid fa-file-code"></i> SQL</button>,
+                        <button class="btn"><i class="fa-brands fa-java"></i> Java</button>,
+                        <button class="btn"><i class="fa-solid fa-c"></i> C programming</button>,
+                        <button class="btn"><i class="fa-brands fa-js"></i> JavaScript</button>,
+                        <button class="btn"><i class="fa-brands fa-html5"></i> Html</button>,
+                        <button class="btn"><i class="fa-brands fa-css3-alt"></i> Css</button>
+                    </li>
+                    <li><strong>Databases:</strong>
+                        <button class="btn"><i class="fa-solid fa-database"></i> MySQL</button>
+                    </li>
+                    <li><strong>Visualization:</strong>
+                        <button class="btn"><i class="fa-solid fa-stairs"></i> Power BI</button>
+                    </li>
+                    <li><strong>Tools:</strong>
+                        <button class="btn"><i class="fa-brands fa-github"></i> Github</button>,
+                        <button class="btn"><i class="fa-solid fa-file-excel"></i> Excel</button>
+                    </li>
+                    <li><strong>Cloud:</strong>
+                        <button class="btn"><i class="fa-brands fa-microsoft"></i> Azure</button>,
+                        <button class="btn"><i class="fa-solid fa-fire"></i> Firebase</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="projects" id="projects" data-aos="fade-up">
+                <h1 style="color: #7AE2CF;">PROJECTS</h1>
+                <ol>
+                    <li class="project-item">
+                        <h3><strong>IoT-Based Health Monitoring System</strong></h3>
+                        <p style="margin-left: 50px;">A smart IoT-based system that continuously monitors a patient’s heartbeat and temperature in
+                            real-time.The sensor data is collected using an ESP8266 microcontroller, which sends it to
+                            Firebase Cloud. The data is then displayed on a mobile application built using MIT App
+                            Inventor.The system includes an emergency alert feature that notifies caretakers through the
+                            app and
+                            activates a buzzer alarm.</p>
+
+                        <div class="project-details">
+                            <strong><em>Key Features:</em></strong>
+                            <ul style="list-style-type: circle;margin-left: 50px;">
+                                <li>Real-time monitoring of ECG and temperature</li>
+                                <li>Emergency button to trigger alerts</li>
+                                <li>Health status display (normal/abnormal)</li>
+                                <li>Firebase integration for cloud-based data sync</li>
+                                <li>LCD display with I2C for local readouts</li>
+                            </ul><br>
+
+                            <strong><em>Technologies Used:</em></strong>
+                            <p style="margin-left: 50px;">HTML, CSS, JavaScript, Firebase, ESP8266</p><br>
+
+                            <strong><em>Role & Contribution:</em></strong>
+                            <ul style="list-style-type: circle;margin-left: 50px;">
+                                <li>Integrated hardware components with microcontroller</li>
+                                <li>Developed Firebase-based cloud storage</li>
+                                <li>Designed MIT App for user interface</li>
+                            </ul>
+                        </div>
+                    </li><br><br>
+                    <li class="project-item">
+                        <h3><strong>Web-Based Calculator</strong></h3><br>
+                        <p style="margin-left: 50px;">
+                            A fully functional, interactive web calculator that performs basic arithmetic operations
+                            like addition, subtraction, multiplication, and division. The interface is designed to be
+                            responsive and user-friendly, allowing easy use across both desktop and mobile devices.
+                        </p><br>
+                        <div class="project-details">
+                            <strong><em>Key Features: </em></strong>
+                            <ul style="list-style-type: circle;margin-left: 50px;">
+                                <li>Supports addition, subtraction, multiplication, division</li>
+                                <li>Clear and reset functions</li>
+                                <li>Smooth button animations and intuitive layout</li>
+                            </ul><br>
+                            <strong><em>Technologies Used: </em></strong><br>
+                            <p style="margin-left: 50px;">HTML, CSS, JavaScript</p><br>
+                            <strong><em>Role & Contribution:</strong></em><br>
+                            <ul style="list-style-type: circle;margin-left: 50px;">
+                                <li>Designed UI using HTML and CSS</li>
+                                <li>Handled event logic and calculations using JavaScript</li>
+                            </ul>
+                        </div>
+                    </li><br><br>
+                    <li class="project-item">
+                        <h3><strong>Student Database Management System</strong></h3><br>
+                        <p style="margin-left: 50px;">
+                            A web-based platform to manage student information. The system will allow users to perform
+                            CRUD operations (Create, Read, Update, Delete) on student records. It will include features
+                            like student search, form validation, and backend connectivity using Python and SQL.
+                        </p><br>
+                        <div class="project-details">
+                            <strong><em>Key Features: </em></strong>
+                            <ul style="list-style-type: circle;margin-left: 50px;">
+                                <li>Add, edit, delete, and view student records</li>
+                                <li>Search and filter functionality</li>
+                                <li>Backend database integration</li>
+                            </ul><br>
+                            <strong><em>Technologies Used: </em></strong><br>
+                            <p style="margin-left: 50px;">HTML, CSS, JavaScript, Python (Flask or Django), MySQL</p><br>
+                            <strong><em>Role & Contribution:</strong></em><br>
+                            <ul style="list-style-type: circle; margin-left: 50px;">
+                                <li>Learn backend development using Python</li>
+                                <li>Understand how to connect front-end forms with a database</li>
+                                <li>Implement secure data handling and validations</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <div class="certifications" id="certifications" data-aos="fade-up">
+                <h1 style="color: #7AE2CF;">CERTIFICATIONS</h1>
+                <ol>
+                    <li>
+                        <h3><strong>Programming and Algorithms using Python</strong></h3><br>
+                        <ul>
+                            <li style="margin-left: 50px;"><em>Issued by:</em> IIT Madras – NPTEL Online Course</li>
+                            <li style="margin-left: 50px;"><em>Duration:</em> Jan–Mar 2024 (8-week course)</li>
+                            <li style="margin-left: 50px;"><em>Summary:</em> Gained in-depth knowledge of Python
+                                programming, algorithm design, and
+                                problem-solving techniques.</li>
+                        </ul>
+                    </li><br>
+                    <li>
+                        <h3><strong>Python Programming</strong></h3><br>
+                        <ul>
+                            <li style="margin-left: 50px;"><em>Issued by:</em> University of Michigan – Coursera</li>
+                            <li style="margin-left: 50px;"><em>Completion Date:</em> January 11, 2023</li>
+                            <li style="margin-left: 50px;"><em>Summary:</em> Learned Python fundamentals including
+                                variables, conditionals, loops, and functions through hands-on coding exercises.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            <div class="contact" id="contact" data-aos="zoom-in">
+                <h1 style="color: #7AE2CF;">CONTACT ME</h1>
+                <div class="contact-left">
+                    <a href="https://www.linkedin.com/in/sindhura-lingampally/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i> linkedin</a>
+                    <br>
+                    <a href="mailto:sindhuralingampally666@gmail.com" target="_blank"><i
+                            class="fa-solid fa-envelope"></i>sindhuralingampally666@gmail.com</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Sindhura's Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li><a href="#right"> Home</a></li>
+                    <li><a href="#about"> About</a></li>
+                    <li><a href="#education"> Education</a></li>
+                    <li><a href="#skills"> Skills</a></li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li><a href="#projects"> Projects</a></li>
+                    <li><a href="#certifications"> Certifications</a></li>
+                    <li><a href="#contact"> Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwD-AofpiyP2S5CVZx7rj95o5M9X_btGGa7XvOjsK1P97pbW0edDR_frLhr5n7IvunK/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg=document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {msg.innerHTML = "Contact form submitted successfully"
+        setTimeout(function(){msg.innerHTML=""},5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: false,
+            mirror: true
+        });
+
+        // Typing animation restarts when home is visited
+        const homeSection = document.querySelector(".leftsection");
+        const typingText = document.getElementById("typingText");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    typingText.classList.remove("typing-text");
+                    void typingText.offsetWidth; // Reflow
+                    typingText.classList.add("typing-text");
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(homeSection);
+
+        // Hero image float-once effect
+        const rightImage = document.getElementById("heroImage");
+
+        const imageObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    rightImage.classList.remove("float-once");
+                    void rightImage.offsetWidth;
+                    rightImage.classList.add("float-once");
+                }
+            });
+        }, { threshold: 0.5 });
+
+        imageObserver.observe(document.querySelector(".rightsection"));
+    </script>
+
+</body>
+
+</html>
